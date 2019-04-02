@@ -4,24 +4,57 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def currentVersionCode = 3
+def currentName = "1.1"
+def currentApplicationId = "hu.gergo.kovacs.jetpackdemo"
+
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "hu.gergo.kovacs.jetpackdemo"
+        applicationId currentApplicationId
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 3
-        versionName "1.1"
+        versionCode currentVersionCode
+        versionName currentName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    dataBinding {
+        enabled = true
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+        debug {
+            minifyEnabled false
+        }
     }
-    dataBinding{
-        enabled = true
+
+    flavorDimensions "demo"
+    productFlavors {
+        dev {
+            dimension "demo"
+            applicationId currentApplicationId
+            versionCode currentVersionCode
+            versionName currentName
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def project = "JetpackDemo"
+            def SEP = "_"
+            def flavor = variant.productFlavors[0].name
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def version = variant.versionName
+            def date = new Date();
+            def formattedDate = date.format('yyMMdd_HHmm')
+
+            def newApkName = project + SEP + flavor + SEP + buildType + SEP + version + SEP + formattedDate + ".apk"
+
+            outputFileName = new File(newApkName)
+        }
     }
 }
 
@@ -32,7 +65,7 @@ def recyclerview_version = "1.1.0-alpha03"
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha03'
     implementation 'androidx.core:core-ktx:1.1.0-alpha05'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
