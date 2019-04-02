@@ -1,3 +1,37 @@
 <resources>
-    <string name="app_name">Jetpack Demo</string>
+    <string name="app_name">JetPack Demo</string>
+    <string name="main_activity_app_tag">MainActivity</string>
+    <string name="item_image_description">Item image</string>
+    <string-array name="item_texts">
+        <item>This should be a long enough text 001</item>
+        <item>This should be a long enough text 002</item>
+        <item>This should be a long enough text 003</item>
+        <item>This should be a long enough text 004</item>
+        <item>This should be a long enough text 005</item>
+        <item>This should be a long enough text 006</item>
+        <item>This should be a long enough text 007</item>
+        <item>This should be a long enough text 008</item>
+        <item>This should be a long enough text 009</item>
+        <item>This should be a long enough text 010</item>
+        <item>This should be a long enough text 011</item>
+        <item>This should be a long enough text 012</item>
+        <item>This should be a long enough text 013</item>
+        <item>This should be a long enough text 014</item>
+        <item>This should be a long enough text 015</item>
+        <item>This should be a long enough text 016</item>
+        <item>This should be a long enough text 017</item>
+        <item>This should be a long enough text 018</item>
+        <item>This should be a long enough text 019</item>
+        <item>This should be a long enough text 020</item>
+        <item>This should be a long enough text 021</item>
+        <item>This should be a long enough text 022</item>
+        <item>This should be a long enough text 023</item>
+        <item>This should be a long enough text 024</item>
+        <item>This should be a long enough text 025</item>
+        <item>This should be a long enough text 026</item>
+        <item>This should be a long enough text 027</item>
+        <item>This should be a long enough text 028</item>
+        <item>This should be a long enough text 029</item>
+        <item>This should be a long enough text 030</item>
+    </string-array>
 </resources>

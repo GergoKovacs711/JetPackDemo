@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="item_images">
+        <item>@drawable/item_image_01</item>
+        <item>@drawable/item_image_02</item>
+        <item>@drawable/item_image_03</item>
+        <item>@drawable/item_image_04</item>
+        <item>@drawable/item_image_05</item>
+        <item>@drawable/item_image_06</item>
+        <item>@drawable/item_image_07</item>
+        <item>@drawable/item_image_08</item>
+        <item>@drawable/item_image_09</item>
+        <item>@drawable/item_image_10</item>
+        <item>@drawable/item_image_11</item>
+        <item>@drawable/item_image_12</item>
+        <item>@drawable/item_image_13</item>
+        <item>@drawable/item_image_14</item>
+        <item>@drawable/item_image_15</item>
+        <item>@drawable/item_image_16</item>
+        <item>@drawable/item_image_17</item>
+        <item>@drawable/item_image_18</item>
+        <item>@drawable/item_image_19</item>
+        <item>@drawable/item_image_20</item>
+        <item>@drawable/item_image_21</item>
+        <item>@drawable/item_image_22</item>
+        <item>@drawable/item_image_23</item>
+        <item>@drawable/item_image_24</item>
+        <item>@drawable/item_image_25</item>
+        <item>@drawable/item_image_26</item>
+        <item>@drawable/item_image_27</item>
+        <item>@drawable/item_image_28</item>
+        <item>@drawable/item_image_29</item>
+        <item>@drawable/item_image_30</item>
+    </array>
+</resources>
