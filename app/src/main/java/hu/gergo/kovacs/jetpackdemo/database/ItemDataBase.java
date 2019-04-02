@@ -80,16 +80,9 @@ public abstract class ItemDataBase extends RoomDatabase {
             TypedArray images = ItemData.INSTANCE.getImages();
 
             for (int i = 0; i < texts.length; i++) {
-                try {
                     int image = images.getResourceId(i, -1);
                     itemDao.insert(new Item(texts[i], image));
-
-                } catch (ArrayIndexOutOfBoundsException e) {
-                    Log.i("Database", "Couldn't find image for text: " + i);
-                }
             }
-
-            images.recycle();
 
             return null;
         }
